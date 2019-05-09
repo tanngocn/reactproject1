@@ -1,0 +1,10 @@
+export  const LOGIN_WEB='LOGIN_WEB';
+export const REGISTER_USER='REGISTER_USER';
+export const GET_KIND_PRODUCT='GET_KIND_PRODUCT';
+export const GET_MATERIAL_PRODUCT="GET_MATERIAL_PRODUCT";
+export const GET_USERS= "GET_USERS";
+export const GET_USERS_CURRENT= "GET_USERS_CURRENT";
+export const UP_LOAD_FILE ="UP_LOAD_FILE";
+// Product
+export const CREATE_PRODUCT ="CREATE_PRODUCT";
+export const GET_PRODUCT="GET_PRODUCT";

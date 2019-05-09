@@ -1,0 +1,76 @@
+*{margin:0;padding: 0;}
+
+div#map {
+    text-align: center;
+}
+
+div#map img {
+    min-width: 80%;
+}
+
+.aboutMe {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+h1.about_title {
+    font-size: 3em;
+    text-align: center;
+    margin: 1em;
+    position: relative;
+    text-transform: uppercase;
+}
+
+h1.about_title:before {
+    content: "";
+    position: absolute;
+    bottom: -.3em;
+    left: 0%;
+    height: .1em;
+    width: 100%;
+
+    background-image: linear-gradient(to right,#9d00ff,#acc9da,#0080ff,#548a6b);
+}
+
+section.aboutBlock {
+    height: auto;
+    background-image: linear-gradient(45deg,#ffffff,#ffffff);
+    box-shadow: 0 4em 3em -3em #d4d4de;
+    border-radius: 0.4em;
+    color: white;
+    border: 1px solid gray;
+}
+
+section.aboutBlock ul {
+    padding: .5em 2em;
+    color: black;
+    list-style: circle;
+}
+
+section.aboutBlock ul li {
+    padding: .5em 1em;
+}
+
+
+
+section.aboutBlock .title {
+    margin: 0em .5em 0em 0em;
+    width: 100%;
+    height: 2em;
+    padding: .4em .6em;
+    background: #464646;
+    box-sizing: border-box;
+    border-radius: .2em .2em 0em 0em;
+}
+
+section.aboutBlock h1.title:before {
+    content: "";
+    border: none;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1em;
+    margin-top: 1em;
+}

@@ -1,0 +1,122 @@
+/*Css add product*/
+button.addProduct, a.btnBack {
+    position: absolute;
+    bottom: -6%;
+    right: 0;
+    width: 7em;
+    font-size: 1.3em;
+    display: inline-block;
+    text-align: center;
+    border-radius: .4em;
+    line-height: 50px;
+    background-image: radial-gradient(circle at bottom,#266bc1,#0b96c7b8,#266bc1);
+    color: white;
+    transition: 0.5s;
+    box-shadow: 0 0 0 0.08em;
+    border:none;
+    cursor: pointer;
+    outline: none;
+}
+
+a.btnBack.red {
+    background-image: radial-gradient(circle at bottom,#ff6b6b,#e87261b8,#da514a);
+    bottom: 5%;
+    left: 5%;
+    text-decoration: none;
+}
+
+
+
+button.addProduct:hover,button.addProduct.resetProduct:hover,a.btnBack:hover {
+    background: radial-gradient(circle at bottom ,#bfadad,#f3f3dd,#ddd);
+    color: #1d1c1c;
+    box-shadow: 0 0 0 0.08em ;
+}
+button.addProduct.resetProduct{
+    left: 0;
+    background-image: radial-gradient(circle at bottom,#e02020,#f12a2ab8,#d01111);
+}
+
+.form.form_createProduct .info2 {
+    position: relative;
+    top: -3%;
+}
+
+h1.title_admin {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    text-align: left;
+    width: 88%;
+    margin-top: 1em;
+}
+
+img.imgProduct {box-sizing: border-box;margin-top: 3em;width: 400px;}
+
+label.file {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: .3em;
+    background-image: radial-gradient(circle at bottom,#266bc1,#31c3f7b8,#266bc1);
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+label.file:hover{
+    background: radial-gradient(circle at bottom ,#bfadad,#f3f3dd,#ddd);
+    color: #1d1c1c;
+    box-shadow: 0 0 0 0.08em ;
+}
+
+.info1 {
+    position: relative;
+    justify-self: center;
+    width: 90%;
+}
+section.form.form_createProduct {
+    width: 900px;
+    min-height: 580px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1em;
+    justify-self: center;
+    align-self: center;
+}
+input[type='file']{
+outline: none;
+display: none;
+}
+section.form.form_createProduct:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    background-image: linear-gradient(to right,#e0c6c6,#9d9de8,#bd5d9cb5,#cc6e6e);
+}
+button.btnUpload {
+    position: absolute;
+    top: -1.3em;
+    left: 18em;
+    padding: .2em;
+    border: none;
+    border-radius: .3em;
+    background-image: radial-gradient(circle at bottom,#266bc1,#31c3f7b8,#266bc1);
+    font-size: 110%;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button.btnUpload:hover {
+    background: radial-gradient(circle at bottom ,#bfadad,#f3f3dd,#ddd);
+    color: #1d1c1c;
+    box-shadow: 0 0 0 0.08em;
+}

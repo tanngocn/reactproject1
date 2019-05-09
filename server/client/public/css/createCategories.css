@@ -1,0 +1,25 @@
+*{margin:0;padding:0;}
+
+button.addProduct.createCategories {
+    bottom: 5%;
+    right: 5%;
+
+}
+
+a.addProduct.resetProduct.createCategories {
+    left: 5%;
+}
+
+section.form.create_categories {
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+section.form.create_categories:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

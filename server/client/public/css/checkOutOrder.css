@@ -1,0 +1,14 @@
+*{ margin:0;padding: 0; }
+
+span.status_check {
+    display: inline-block;
+    background: #e26a6a;
+    color: white;
+    padding: .5em;
+    border-radius: .3em;
+}
+
+span.status_check.no {
+    background: gray;
+
+};

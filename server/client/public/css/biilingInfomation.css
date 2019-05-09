@@ -1,0 +1,17 @@
+*{margin:0;padding: 0;}
+
+section.form.billing_form {
+    width: 600px;
+    position: relative;
+    height: 400px;
+}
+
+section.form.billing_form .title_page {
+    text-align: center;
+}
+
+section.form.billing_form:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+}

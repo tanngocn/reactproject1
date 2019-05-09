@@ -1,0 +1,331 @@
+*{margin:0;padding: 0;}
+
+img.product_img_home {
+    height: 200px;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+    background: #9292e0;
+}
+
+.modaldelete h1.title_modal {
+    line-height: 200px;
+}
+
+a.btn_yesno {
+    position: absolute;
+    bottom: 2em;
+    color: white;
+    text-decoration: none;
+    font-size: 120%;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: .4em;
+}
+
+a.btn_yesno.no {
+    left: 3em;
+    background-color: gray;
+}
+a.btn_yesno.yes{
+    
+right: 3em;
+    
+background: #e45b5b;
+}
+a.btn_yes.no {
+    left: -4em;
+}
+
+.modaldelete {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    margin-left: -150px;
+    margin-top: -100px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #a9b8b8;
+    border-radius: 1.1em;
+    z-index: 5;
+    background: white;
+    box-shadow: 0em .2em 2em -1em gray;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+span.status_home {
+    display: inline-block;
+    border-radius: 0em .3em .3em 0em;
+    background: #e66060;
+    padding: 0.5em 1em;
+    color: white;
+    border: 1px solid #928c8c;
+    margin-bottom: 1em;
+}
+span.status_home.off{
+    background: #d2caca;
+}
+
+span.price_product_home {
+    padding: 0 1em;
+}
+
+h3.name_product_home {
+    padding: 0 1em;
+    width: 10em;
+    line-height: 1.5em;
+}
+
+
+.product_item:hover a.btn_home_product{
+    right: 1em;
+}
+.infoproduct {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 2em;
+    left: 0em;
+    width: 100%;
+}
+
+.infoproduct span.price_product_home {
+    color: #f75555;
+    display: inline-block;
+    margin-top: .3em;
+}
+
+
+a.btn_home_product.btn-view {
+    bottom: 1.5em;
+    background-image: radial-gradient(circle at bottom,#50dc50,#5be478,#50dc50);
+}
+
+a.btn_home_product {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    right: -11em;
+    width: 150px;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+    border-radius: .4em;
+    transition: 0.5s;
+}
+
+a.btn_home_product.btn-delete {
+    background-image: radial-gradient(circle at bottom, #e74c3c,#f18888,#e74c3c);
+    bottom: 1em;
+    width: 100px;
+}
+
+a.btn_home_product.btn-edit {bottom: 4em;background-image: radial-gradient(circle at bottom, #f1c40f, #f9da60e6,#f1c40f);z-index: 4;width: 100px;}
+.product_item:hover a.btn_home_product.btn-edit,
+.product_item:hover a.btn_home_product.btn-delete {
+    right:1em;
+}
+
+
+a.btn_home_product.btn-add {
+    bottom: 4em;
+    background-image: radial-gradient(circle at bottom,#5089f1,#6e99e8,#5089f1);
+}
+
+a.link_detail {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+section.productListHome {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2em;
+    grid-template-rows: auto;
+}
+
+img.banner {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    border-radius: 1em;
+}
+
+a.banner_bands {
+    width: 100%;
+    height: 250px;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+a.info {
+    display: inline-block;
+    width: 100%;
+    transition: 0.5s;
+}
+
+a.info:hover img.product_banner {
+    background: #808080c2;
+}
+
+.info_right {display: grid;grid-gap: 1em;}
+
+img.product_banner {
+    width: 100%;
+    height: 250px;
+    transition: 0.5s;
+    transform: scale(1);
+    border-radius: .5em;
+}
+
+img.product_banner:hover {
+    transform: scale(1.1);
+}
+
+
+button.btn_slide_img {
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    width: 20px;
+    background-color: #39393a29;
+    transition: 0.5s;
+}
+
+button.btn_slide_img.prevSlide {
+    left: -2em;
+}
+
+button.btn_slide_img.nextSlide {
+    right: -2em;
+}
+
+ul.listSlide:hover button.btn_slide_img.nextSlide {
+    right: 0;
+}
+
+ul.listSlide:hover button.btn_slide_img.prevSlide {
+    left: 0;
+}
+
+img.layer1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.itemBanner {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    height: 100%;
+}
+
+li.listStyleItem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+li.listStyleItem.active {
+    opacity: 1;
+}
+.outNext{
+    animation: outNext 1s forwards;
+} 
+@-webkit-keyframes outNext{
+    from{
+            transform: translateX(0);opacity:1;
+        }to{
+            transform: translateX(-100%);opacity:0;
+        }
+}
+.goIn{
+    animation: goIn 1s forwards;
+}
+@-webkit-keyframes goIn{
+    from{
+            transform: translateX(100%);opacity:0;
+        }to{
+            transform: translateX(0);opacity:1;
+        }
+}
+.outPrev{
+    animation: outPrev 1s forwards;
+}
+@-webkit-keyframes outPrev{
+    from{
+            transform: translateX(0);opacity:1;
+        }to{
+            transform: translateX(100%); opacity:0;
+        }
+}
+.goInPrev{
+    animation: goInPrev 1s forwards;
+}
+@-webkit-keyframes goInPrev{
+    from{
+            transform: translateX(-100%);opacity:0;
+        }to{
+            transform: translateX(0%);opacity: 1;
+        }
+}
+
+ul.listSlide {
+    position: relative;
+    grid-column: 1/2;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+ul.listSlide:hover btn_slide_img.nextSlide {
+    right: 0;
+}
+
+.main .info_left {
+    grid-column: 1/2;
+    height: 100%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2em;
+    grid-template-rows: auto;
+    margin-top: 1em;
+}
+.list_product_same.home:before {
+    content: "";
+    display: none;
+}
+h1.title_product_detail.home {
+    font-size: 2.3em;
+    text-align: left;
+    color: #d25555;
+}
+a.btn_home_product:hover{
+    color:#353434;
+        background-image: radial-gradient(circle at bottom , #d6cdcd, #f5f2f28a, #e0d5d5);
+}
