@@ -12,7 +12,14 @@ a.btn-getAccount {
     color: red;
     transition: 0.5s;
 }
-
+input.form-file {
+    position: absolute;
+    left: 4em;
+    top: -.3em;
+    border: none;
+    border-bottom: 2px solid #00000085;
+    font-size: 1.1em;
+}
 a.btn-getAccount:hover {
     color: #6b6565;
 }
@@ -58,13 +65,15 @@ img.logo_thumb {
   z-index: 1;
   margin-top: 20px;
   border-bottom: 3px solid #5a5a65;
-   color: #424040;
+  color: #424040;
+  transition:0.5s;
+  margin-top: 2em;
 }
 input.form-ctr:focus ,
 input.form-ctr:valid,
 input.form-ctr:disabled  {
       border-bottom: 3px solid #9e8dff;
-      padding: .3em .3em;
+      padding: .3em 0em;
 }
 input.form-ctr:disabled{
     background: #f5f8ff;
@@ -99,11 +108,12 @@ input.form-ctr:disabled +label.label-form{
 }
 section.form.createUser {
     width: 350px;
+    height: 340px;
 }
 section.form {
     padding: 2em;
     width: 350px;
-    height: 320px;
+    height: 300px;
     border-radius: .5em;
     box-shadow: 0.1em 0.1em 0.3em #4f3056c2, -0.1em 0.1em 0.3em #4f3056c2;
     position: relative;
@@ -204,6 +214,3 @@ select.form-ctr.add:valid +label.label-form
 
 }
 
-input[type!="checkbox"],input[type!="radio"]{
-    
-}

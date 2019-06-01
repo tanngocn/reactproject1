@@ -12,6 +12,9 @@ const registerRouter =require('./routes/user');
 const authRouter =require('./routes/auth');
 const productRouter=require('./routes/product');
 const uploadRouter = require('./routes/upload');
+const cartRouter= require('./routes/cart');
+const kindRaitingRouter =require('./routes/kindRaiting');
+const reviewProductRouter= require('./routes/review');
 
 // config mongodb
     mongoose.connect('mongodb://localhost/finalProject')
@@ -39,7 +42,11 @@ app.use('/api/material', materialRouter);
 app.use('/api/register', registerRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/product', productRouter);
-app.use('/api/upload', uploadRouter)
+app.use('/api/upload', uploadRouter);
+app.use('/api/cart', cartRouter);
+app.use('/api/kindraiting', kindRaitingRouter);
+app.use('/api/review', reviewProductRouter);
+//
 const port=process.env.PORT ||5000
 app.listen(port,()=>{
     console.log('server running in',port );

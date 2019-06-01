@@ -22,9 +22,7 @@ class Homepage extends Component {
     }
    
   }
-  componentDidMount() {
-   
-  }
+
    nextSlide=()=>{
      let {current, slide}=this.state;
      const numberSlide=slide.length;
@@ -33,7 +31,7 @@ class Homepage extends Component {
 		}
 		statuSlide="trans";
 		let statustwoSlide=0;
-		let slideCurrent=slide[current];
+		var slideCurrent=slide[current];
 		current=(current<numberSlide-1?current+1:0);
 		this.setState({
       current:current
@@ -41,21 +39,20 @@ class Homepage extends Component {
 		let slideNext= slide[current];
 		slideCurrent.classList.add("outNext");
 		slideNext.classList.add("goIn");
-		let xlslidecurrent=function(){
-				slideCurrent.classList.remove('active');
-				slideCurrent.classList.remove('outNext');
+		slideCurrent.addEventListener('webkitAnimationEnd',function(){
+				this.classList.remove('active');
+				this.classList.remove('outNext');
 				statustwoSlide++;
 				statuSlide=(statustwoSlide===2)?('stay'):statuSlide;
-			}
-		let xlslidenext=function(){
+      })
+
+      slideNext.addEventListener('webkitAnimationEnd',function(){
 				// sử dụng toán tử 3 ngôi
 				this.classList.remove('goIn');
 				this.classList.add('active');
 				statustwoSlide++;
 				statuSlide=(statustwoSlide===2)?('stay'):statuSlide;
-				}
-		slideCurrent.addEventListener('webkitAnimationEnd',xlslidecurrent,true);
-		slideNext.addEventListener('webkitAnimationEnd',xlslidenext,true);
+				})
 	}
     prevSlide=(event)=>{
       let {current, slide}=this.state;
@@ -74,11 +71,11 @@ class Homepage extends Component {
       slideCurrent.classList.add("outPrev");
       slideNext.classList.add("goInPrev");
   
-      let xlslidecurrent=function(){
+      let xlslidecurrent= async function(){
           // Khi hiệu ứng của bất kì nút trái hay phải chạy xong thì đều xóa class active
-          slideCurrent.classList.remove('active');
+         await slideCurrent.classList.remove('active');
           // Nếu là nút phải thì xóa class dira
-          slideCurrent.classList.remove('outPrev');
+         await slideCurrent.classList.remove('outPrev');
           statustwoSlide++;
           statuSlide=(statustwoSlide===2)?('stay'):statuSlide;
         }
@@ -93,9 +90,6 @@ class Homepage extends Component {
       slideNext.addEventListener('webkitAnimationEnd',xlslidenext,true);
     }
     render() {
-      setInterval(()=>this.nextSlide()
-           
-      ,10000);
         return (
             <section className="container">
            
@@ -133,17 +127,17 @@ class Homepage extends Component {
               </div>
             </div>
             {/* banner */}
-            <a  href="#/" className="banner_bands"><img src="../images/bn7.jpg" alt="banner" className="banner" /></a>
+            <a  href="#/" className="banner_bands"><img src="../images/banner2.png" alt="banner" className="banner" /></a>
             {/* productList */}
             <section className="product_same_type_list ">
               <div className="title_page ">
-                <h1 className="title_product_detail home">Title Here </h1>
+                <h1 className="title_product_detail home">Sản phẩm mới </h1>
                 <hr className="title_line review" />
               </div>
                 <HomeproductTop/>
             </section>
             <div className="title_page ">
-              <h1 className="title_product_detail home">ProductList </h1>
+              <h1 className="title_product_detail home">Danh sách sản phẩm </h1>
               <hr className="title_line review" />
             </div>
            <ProductList/>

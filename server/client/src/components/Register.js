@@ -55,8 +55,8 @@ class Register extends Component {
               <input type="password" name="password" defaultValue={password} onChange={(event)=>this.onChangehandle(event)} id="passWord"  required className="form-ctr" />
               <label htmlFor="password" className="label-form"><i className="fas fa-lock" /> Password:</label>
             </div>
-            <button  type="submit" name="submit" onClick={(event)=>this.sendData(event)} className="addProduct createCategories"  title="Thêm mới">Create</button>
-            <Link  to="/" className="btnBack red" title="Hủy thao tác"> Back</Link>
+            <a href="#/" type="submit" name="submit" onClick={(event)=>this.sendData(event)} className="addProduct createCategories"  title="Thêm mới">Create</a>
+            <Link  to="/" className="btnBack red Register" title="Hủy thao tác"> Back</Link>
             </form>
 
           </section>

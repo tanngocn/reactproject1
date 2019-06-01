@@ -5,6 +5,7 @@
     height: 5px;
     background-image: linear-gradient(to top,#f1d5d5,#98a7ef);
     position: fixed;
+    z-index: 4;
     top: 0;
     left: 0;
 }
@@ -19,13 +20,22 @@ span.status {
     color: white;
     border: 1px solid #928c8c;
 }
+
+span.status.productListComponent {
+    bottom: 6em;
+}
 span.status.off{
     background: gray;
 }
-span.price {
+span.priceProduct {
     position: absolute;
     left: 2%;
     bottom: 9%;
+}
+
+span.priceProduct.productListComponent {
+    color: #c34f4f;
+    font-weight: bold;
 }
 
 a.btnn.btn-view {
@@ -54,8 +64,13 @@ h3.name_product {
     position: absolute;
     bottom: 15%;
     left: 2%;
-    font-size: 120%;
+    font-size: 115%;
     display: inline-block;
+}
+
+h3.name_product.productListComponent {
+    width: 180px;
+    line-height: 21px;
 }
 
 img.product_img {

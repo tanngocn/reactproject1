@@ -66,7 +66,10 @@ class App extends Component{
   render(){
       
     return (
-      <Suspense fallback={<div>Loading...</div>}> 
+      <Suspense fallback={    <div className="loadingAnimation">
+                                 <div className="blockanimation">
+                                 </div>
+                             </div>}> 
        <Router>
                {/* <Header show={this.state.show}/> */}
                  <Switch>

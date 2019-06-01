@@ -6,7 +6,6 @@ import Carts from './Carts';
 class Cartcontainer extends Component {
     componentDidMount() {
         const token=JSON.parse(sessionStorage.getItem('token'));
-        console.log(this.props.history);
         if(token!== null){
             return;
         }else{

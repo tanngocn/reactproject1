@@ -90,9 +90,6 @@ class SliderbarAdmin extends Component {
        
         return (
             <aside id="menu_left">
-              <div className="link_logo_admin">
-                {/* <img src={logo} alt="logohere" id="logo_menu" /> */}
-              </div>
               {/* end logo */}
               <ul id="menu_content">
                   {this.showList(this.state.menuAdmin)}

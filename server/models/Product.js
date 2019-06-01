@@ -45,28 +45,7 @@ const productSchema= new Schema({
     dateCreate:{
         type:Date,
         default: Date.now
-    },
-    oneStar:{
-        type:Number,
-        default:0
-    },
-    twoStar:{
-        type:Number,
-        default:0
-    },
-    threeStar:{
-        type:Number,
-        default:0
-    },
-    fourStar:{
-        type:Number,
-        default:0
-    },
-    fiveStar:{
-        type:Number,
-        default:0
     }
-    
 })
 const Product=mongoose.model('Products',productSchema);
 
@@ -77,7 +56,8 @@ function validateProduct(product) {
         qualityProduct: Joi.number().min(0).max(200).required(),
         description: Joi.string().min(5).max(255).required(),
         kindProductId:Joi.objectId().required(),
-        materialId:Joi.objectId().required()
+        materialId:Joi.objectId().required(),
+        imgProduct:Joi.string().required()
     };
   
     return Joi.validate(product, schema);

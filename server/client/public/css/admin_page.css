@@ -2,6 +2,7 @@
 @import url("./product.css");
 @import url("./style.css");
 @import url("./login.css");
+@import url("./loading.css");
 @import url("./cart.css");
 @import url("./createProduct.css");
 @import url("./aboutUs.css");
@@ -31,11 +32,10 @@ a.submit_footer {
     color: white;
     background: #d24a4a;
     padding: 0.4em;
-    margin-right: .4em;
-    border-radius: .2em;
+    margin-right: 0.6em;
     transition: 0.5s;
     display: inline-block;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
 }
 footer.footer_admin {
     width: 100%;
@@ -234,7 +234,7 @@ aside#menu_left {
     grid-column: 1/2;
     padding: .1em;
     box-shadow: 0 0 0.3em #8732dc;
-    margin: .3em 0em; 
+    margin: .3em 0em;
 }
 .mt-2{
     margin-top: 2em;
@@ -242,6 +242,10 @@ aside#menu_left {
 main.content_admin {
     grid-column: 2/13;
     padding: 1em;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    margin-left: 1em;
 }
 .title_page_admin {
     width: 100%;

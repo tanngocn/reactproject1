@@ -1,7 +1,7 @@
 /*Css add product*/
-button.addProduct, a.btnBack {
+a.addProduct, a.btnBack {
     position: absolute;
-    bottom: -6%;
+    bottom: -7%;
     right: 0;
     width: 7em;
     font-size: 1.3em;
@@ -16,6 +16,7 @@ button.addProduct, a.btnBack {
     border:none;
     cursor: pointer;
     outline: none;
+    text-decoration: none;
 }
 
 a.btnBack.red {
@@ -25,14 +26,24 @@ a.btnBack.red {
     text-decoration: none;
 }
 
+a.btnBack.red.Register {
+    bottom: 7%;
+    left: 8%;
+}
 
 
-button.addProduct:hover,button.addProduct.resetProduct:hover,a.btnBack:hover {
+
+a.addProduct:hover,button.addProduct.resetProduct:hover,a.btnBack:hover {
     background: radial-gradient(circle at bottom ,#bfadad,#f3f3dd,#ddd);
     color: #1d1c1c;
     box-shadow: 0 0 0 0.08em ;
 }
-button.addProduct.resetProduct{
+
+a.addProduct.createCategories {
+    bottom: 7%;
+    right: 8%;
+}
+a.addProduct.resetProduct{
     left: 0;
     background-image: radial-gradient(circle at bottom,#e02020,#f12a2ab8,#d01111);
 }
@@ -80,7 +91,7 @@ label.file:hover{
 }
 section.form.form_createProduct {
     width: 900px;
-    min-height: 580px;
+    min-height: 630px;
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-gap: 1em;

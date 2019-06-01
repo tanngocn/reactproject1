@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import * as actions from './../../../actions/index';
-import {connect} from 'react-redux'
-class ListUser extends Component {
-  componentDidMount() {
-    this.props.getUser();
+import * as actions from './../../../../actions/index';
+import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
+
+
+class ListUser extends Component {  
+  async componentDidMount() {
+   await this.props.getUser();
   }
+
     showListUser=(users)=>{
       let result=null;
       if(users.length>0){
@@ -17,7 +21,7 @@ class ListUser extends Component {
                   <td>{user.dateCreate}</td>
                   <td><span className={(user.isAdmin)?"status_check":"status_check no"}>{(user.isAdmin)?"true":"false"} </span></td>
                   <td>
-                    <a href="#/" className="removebtn" title="Xóa User "><i className="fas fa-trash-alt" /></a>
+                    <Link to={`/homeContainer/admin/users/${user._id}`} className="removebtn"  title="Xóa User "><i className="fas fa-trash-alt" /></Link>
                   </td>
                 </tr>
           )
@@ -26,7 +30,6 @@ class ListUser extends Component {
       return result;
     }
     render() {
-      console.log(this.props.kindList)
         return (
             <div className="checkout">
             <div className="title_page">

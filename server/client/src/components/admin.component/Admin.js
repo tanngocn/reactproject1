@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import logo from './../../logo.svg';
 import SliderbarAdmin from './SliderbarAdmin';
 import routes from './../../routes/admin';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // const CreateProduct=lazy(() => import('./content/CreateProduct'));
 
@@ -21,7 +21,7 @@ class Admin extends Component {
                 path={route.path}
                 exact={route.exact}
                 component={route.main}
-                strict />
+                 />
             )
           })
         }
@@ -35,7 +35,9 @@ class Admin extends Component {
                         <div id="wrapper_admin">
                         <SliderbarAdmin/>
                         <main className="content_admin">
+                        <Switch>
                                 {this.showMain(routes)}
+                        </Switch>
                         </main>
                         </div>
                        

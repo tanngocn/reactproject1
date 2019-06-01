@@ -59,6 +59,20 @@ a.nav-link {
     text-transform: uppercase;
 }
 
+a.nav-link.cart {
+    position: relative;
+}
+
+a.nav-link.cart span {
+    position: absolute;
+    top: -1.1em;
+    left: 1.7em;
+    background: #e26a6a;
+    color: white;
+    padding: .4em;
+    border-radius: 50% 50% 50% 0%;
+}
+
 a.nav-link:hover {
     color: #3ae23a;
 }
@@ -206,5 +220,9 @@ table.table_style td.name_product {
     .container {
     width: 1170px;
     }
+}
+a.white {
+    color: white;
+    text-decoration: none;
 }
 

@@ -6,6 +6,12 @@ import materialReducer from './material';
 import userReducer from './user';
 import uploadReducer from './upload';
 import productReducer from './product';
+import viewDetailProductReducer from './viewDetail';
+import kindRaitingReducer from './kindRaiting';
+import chartReducer from './chart';
+import reviewListReducer from './ListReview';
+import newProductReducer from './newProduct';
+import cartReducer from './cart';
 
 
 const myReducer= new combineReducers({
@@ -15,7 +21,13 @@ const myReducer= new combineReducers({
     materialReducer,
     userReducer,
     uploadReducer,
-    productReducer
+    productReducer,
+    viewDetailProductReducer,
+    kindRaitingReducer,
+    chartReducer,
+    reviewListReducer,
+    newProductReducer,
+    cartReducer
     
 
 })

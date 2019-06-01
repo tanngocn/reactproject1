@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link, Route} from 'react-router-dom';
 import logo from './../logo.svg';
-// import {connect} from 'react-redux';
+import {connect} from 'react-redux';
 const menus = [
   {
     name: "Home",
@@ -22,12 +22,6 @@ const menus = [
     name: "Help",
     to: "/homeContainer/help",
     exact: false
-  },
-  {
-    name:"",
-    to:"/homeContainer/cart",
-    exact:false,
-    icon:"fas fa-shopping-cart"
   }
 ];
 // Custom Link
@@ -57,13 +51,15 @@ class Header extends Component {
       show:this.props.show,
       isAdmin:false,
       name:"",
+      number:0
      
     }
      
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const token=JSON.parse(sessionStorage.getItem('token'));
+   
     if(token!== null &&token){
       this.setState({
         show:!this.props.show,
@@ -83,6 +79,7 @@ class Header extends Component {
 
     logOut=()=>{
       sessionStorage.removeItem('token');
+      localStorage.removeItem("CART");
       this.setState({
         showHeader:false,
       });
@@ -125,7 +122,10 @@ class Header extends Component {
         }
       }     
       
-    render() {
+    render() {  
+        let {productCart} =this.props
+       
+        let number =(!productCart)?0:productCart.length
         return (
          
             <header className={`container `}>
@@ -133,6 +133,7 @@ class Header extends Component {
               <a href="/homeContainer"><img src={logo} alt="logo" className="logo_user" /></a>	
               <ul className="nav-menu">
               {this.showMenu(menus)}
+              <Link to="/homeContainer/cart" className="nav-link cart"><i className="fas fa-shopping-cart"></i> <span>{number}</span></Link>
               {this.showContent()}
               <a href="/" onClick={()=>this.logOut()}   className="nav-link"><i className="fas fa-sign-out-alt"></i> Logout</a>
               </ul>
@@ -142,6 +143,12 @@ class Header extends Component {
         );
     }
 }
+const mapStateToProps = (state, ownProps) => {
+  return {
+    productCart: state.cartReducer
+  }
+}
 
-export default Header
+export default connect(mapStateToProps, null)(Header)
+
 

@@ -51,7 +51,7 @@ section.product_list_item {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 0.5em;
-    grid-row: span 2;
+    grid-row: span 1;
 }
 
 aside.sort_product {
@@ -67,7 +67,7 @@ aside.sort_product {
 section.product_list_page {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
     grid-gap: 1em;
     margin-top: 1em;
 }
